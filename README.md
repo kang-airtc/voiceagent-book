@@ -78,6 +78,4 @@
 
 ## 课程一览
 
-<a href="https://www.bilibili.com/cheese/play/ss274159994">
-  <img src="figures/poster.png" width="420" alt="VoiceAgent 全栈实战课程海报">
-</a>
+[![VoiceAgent 全栈实战课程海报](figures/poster.png)](https://www.bilibili.com/cheese/play/ss274159994)
