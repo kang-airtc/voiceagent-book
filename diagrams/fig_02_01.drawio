@@ -1,0 +1,200 @@
+<mxfile host="Electron" agent="Claude Code" type="device">
+  <diagram name="一轮对话时间线" id="voice-agent-timeline">
+    <mxGraphModel dx="1500" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1560" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="从「人开始说话」到「听到 AI 的声音」" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="700" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lane-user" value="" style="rounded=0;html=1;fillColor=#F5F5F5;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="1460" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-front" value="" style="rounded=0;html=1;fillColor=#EAF2FD;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="1460" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-back" value="" style="rounded=0;html=1;fillColor=#EAF7EC;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="1460" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-stt" value="" style="rounded=0;html=1;fillColor=#FFF4E6;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="440" width="1460" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-llm" value="" style="rounded=0;html=1;fillColor=#FFF4E6;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="540" width="1460" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lane-tts" value="" style="rounded=0;html=1;fillColor=#FFF4E6;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="640" width="1460" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ll-user" value="👤 用户" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#404040;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ll-front" value="前端" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1F4E79;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ll-back" value="后端" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#2D6A31;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="50" y="350" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ll-stt" value="STT" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#A96800;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ll-llm" value="LLM" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#A96800;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="50" y="550" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ll-tts" value="TTS" style="text;html=1;align=right;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#A96800;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="50" y="650" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ax-t" value="时间" style="text;html=1;align=right;verticalAlign=middle;fontSize=12;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="60" y="88" width="140" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax0" value="0" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="195" y="88" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax1" value="0.5 s" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="435" y="88" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax2" value="1.0 s" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="675" y="88" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax3" value="1.5 s" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="915" y="88" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax4" value="2.0 s" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1155" y="88" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax5" value="2.5 s" style="text;html=1;align=center;verticalAlign=middle;fontSize=11;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1395" y="88" width="50" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="ax-line" style="edgeStyle=none;html=1;strokeColor=#B0B0B0;strokeWidth=1.5;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="120" as="sourcePoint" />
+            <mxPoint x="1450" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="g1" style="edgeStyle=none;html=1;strokeColor=#B85450;strokeWidth=2;dashed=1;dashPattern=6 6;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="652" y="120" as="sourcePoint" />
+            <mxPoint x="652" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g2" style="edgeStyle=none;html=1;strokeColor=#2D6A31;strokeWidth=2;dashed=1;dashPattern=6 6;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1324" y="120" as="sourcePoint" />
+            <mxPoint x="1324" y="800" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="u1" value="说话中：「今天天气怎么样」" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#E8E8E8;strokeColor=#808080;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="220" y="150" width="432" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" value="👂 &lt;b&gt;听到 AI 开口&lt;/b&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5EBD8;strokeColor=#82B366;strokeWidth=2.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1324" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="f1" value="采集 · 分帧 · 上行&lt;br&gt;&lt;font style='font-size:10px'&gt;每 20 ms 一帧，持续不断&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D4E4F7;strokeColor=#6C8EBF;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="220" y="250" width="456" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="播放&lt;br&gt;&lt;font style='font-size:10px'&gt;无缝排期&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D4E4F7;strokeColor=#6C8EBF;strokeWidth=2.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1324" y="250" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="转发音频给 STT" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5EBD8;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="230" y="350" width="456" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="切句 · 送 TTS · 回传音频" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5EBD8;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1108" y="350" width="240" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t1" value="流式识别&lt;br&gt;&lt;font style='font-size:10px'&gt;边听边出中间结果，前端逐字上屏&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="234" y="450" width="418" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="⏳ endpointing 等静音&lt;br&gt;&lt;font style='font-size:10px'&gt;判定这句说完了&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=2.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="652" y="450" width="288" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l1" value="生成回复&lt;br&gt;&lt;font style='font-size:10px'&gt;流式逐 token 吐出&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="940" y="550" width="432" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="合成第一句" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1156" y="650" width="168" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="合成第二句…" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFF4E6;strokeColor=#D79B00;strokeWidth=1.5;dashed=1;fontSize=11;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1324" y="650" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a0a" style="edgeStyle=none;html=1;strokeColor=#606060;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="212" as="sourcePoint" />
+            <mxPoint x="280" y="248" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0b" style="edgeStyle=none;html=1;strokeColor=#606060;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="312" as="sourcePoint" />
+            <mxPoint x="310" y="348" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a0c" style="edgeStyle=none;html=1;strokeColor=#606060;strokeWidth=2;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="412" as="sourcePoint" />
+            <mxPoint x="340" y="448" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a1" value="final 整句" style="edgeStyle=none;html=1;strokeColor=#606060;strokeWidth=2;endArrow=blockThin;endFill=1;fontSize=11;fontFamily=PingFang SC;labelBackgroundColor=#FFF4E6;verticalAlign=middle;align=left;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="940" y="512" as="sourcePoint" />
+            <mxPoint x="940" y="548" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="第一句成型" style="edgeStyle=none;html=1;strokeColor=#606060;strokeWidth=2;endArrow=blockThin;endFill=1;fontSize=11;fontFamily=PingFang SC;labelBackgroundColor=#FFF4E6;verticalAlign=middle;align=left;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1180" y="612" as="sourcePoint" />
+            <mxPoint x="1180" y="648" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a3" value="第一块音频" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2D6A31;strokeWidth=2.5;endArrow=blockThin;endFill=1;fontSize=11;fontColor=#2D6A31;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1300" y="712" as="sourcePoint" />
+            <mxPoint x="1399" y="312" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1300" y="740" />
+              <mxPoint x="1399" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a4" style="edgeStyle=none;html=1;strokeColor=#2D6A31;strokeWidth=2.5;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1399" y="248" as="sourcePoint" />
+            <mxPoint x="1399" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="lbl-g1" value="用户说完&lt;br&gt;（静音开始）" style="text;html=1;align=center;verticalAlign=top;fontSize=11;fontStyle=1;fontColor=#B85450;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="557" y="805" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-g2" value="用户听到第一个字" style="text;html=1;align=center;verticalAlign=top;fontSize=11;fontStyle=1;fontColor=#2D6A31;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1229" y="805" width="190" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bracket" value="首字延迟 ≈ 1.4 s" style="edgeStyle=none;html=1;strokeColor=#4D4D4D;strokeWidth=2;startArrow=blockThin;startFill=1;endArrow=blockThin;endFill=1;fontSize=13;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="652" y="785" as="sourcePoint" />
+            <mxPoint x="1324" y="785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="note1" value="&lt;b&gt;延迟的大头是「等静音」&lt;/b&gt;&lt;br&gt;&lt;br&gt;用户说完到 STT 确认这句结束，中间是 endpointing 在等 —— 图上这段红色的 0.5 s 什么都没在算，纯等。它是首字延迟里最大、也最难省的一块。调小会把句中停顿当成说完（「我想…」就抢答），调大整体变慢。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCE8;strokeColor=#D6B656;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#7A5C00;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="865" width="710" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="note2" value="&lt;b&gt;右半边是重叠的，不是排队的&lt;/b&gt;&lt;br&gt;&lt;br&gt;看 LLM 和 TTS 两条：LLM 还在写后面的内容时，第一句已经在合成；第一句在播放时，第二句已经在合成。所以用户听到的是「说完第一句所需的时间」，不是「整段生成 + 整段合成」的时间。&lt;br&gt;去掉流式，这张图的右半边会拉长两三倍。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCE8;strokeColor=#D6B656;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#7A5C00;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="790" y="865" width="710" height="130" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

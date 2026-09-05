@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="延迟预算五段">
+    <mxGraphModel dx="1000" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="首字延迟的五段构成" style="text;html=1;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="500" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="横条长度为真实比例：等静音与 LLM 首字两段合计约占七成" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="52" width="700" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mark" value="用户说完最后一个字" style="text;html=1;align=left;verticalAlign=middle;fontSize=13;fontColor=#999999;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="270" y="88" width="240" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vline" value="" style="endArrow=none;html=1;strokeColor=#cccccc;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="112" as="sourcePoint" />
+            <mxPoint x="270" y="392" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="l1" value="①  等静音判定" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="118" width="230" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="118" width="180" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="300 ms" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="920" y="118" width="80" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l2" value="②  STT 回最终结果" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="160" width="230" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="270" y="160" width="60" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="100 ms" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="920" y="160" width="80" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l3" value="③  LLM 吐出第一个字" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="202" width="230" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="270" y="202" width="240" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="400 ms" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="920" y="202" width="80" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l4" value="④  TTS 合出第一块音频" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="244" width="230" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="270" y="244" width="120" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="200 ms" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="920" y="244" width="80" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l5" value="⑤  网络与抖动缓冲" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="286" width="230" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="270" y="286" width="30" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" value="50 ms" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="920" y="286" width="80" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sepline" value="" style="endArrow=none;html=1;strokeColor=#dddddd;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="340" as="sourcePoint" />
+            <mxPoint x="970" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="lsum" value="合计" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="230" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="270" y="360" width="180" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="450" y="360" width="60" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="510" y="360" width="240" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="750" y="360" width="120" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="870" y="360" width="30" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="msum" value="≈ 1.05 s" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="920" y="360" width="80" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="concl" value="用户在这 1.05 秒之后听见第一个字。压缩延迟应优先处理 ① 和 ③，抠 ②④⑤ 收益很小。" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="30" y="404" width="940" height="24" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

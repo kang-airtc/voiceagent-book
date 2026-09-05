@@ -1,0 +1,145 @@
+<mxfile host="Electron" agent="Claude Code" type="device">
+  <diagram name="语音对话通用流程" id="voice-agent-flow">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="g-browser" value="浏览器" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#EAF2FD;strokeColor=#6C8EBF;dashed=1;dashPattern=8 8;verticalAlign=top;align=left;spacingLeft=14;spacingTop=2;fontSize=15;fontStyle=1;fontColor=#1F4E79;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1220" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="g-server" value="服务端　（一个连接 = 一份独立状态）" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#EAF7EC;strokeColor=#82B366;dashed=1;dashPattern=8 8;verticalAlign=top;align=left;spacingLeft=14;spacingTop=2;fontSize=15;fontStyle=1;fontColor=#2D6A31;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="900" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="g-cloud" value="云服务　（可替换供应商）" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=#FFF4E6;strokeColor=#D79B00;dashed=1;dashPattern=8 8;verticalAlign=top;align=left;spacingLeft=14;spacingTop=2;fontSize=15;fontStyle=1;fontColor=#A96800;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="970" y="330" width="290" height="560" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n1" value="① 麦克风采集&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;echoCancellation 必开&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="70" y="100" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="② 重采样 16 kHz&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;Float32 → Int16 单声道&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="270" y="100" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="③ 分帧 20 ms&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;AudioWorklet 独立线程&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="470" y="100" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n12" value="⑫ 无缝播放&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;nextTime 精确排期 · clear 可中断&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="100" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl-down" value="⑪ WebSocket 二进制下行&lt;br&gt;PCM 音频帧 + JSON 事件" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;fontColor=#1F4E79;fontFamily=PingFang SC;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="180" width="250" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n5" value="⑤ 分发：每帧走两路" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="390" y="380" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="n6" value="⑥ STT 客户端&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;interim 中间结果 / final 整句&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="390" y="470" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n7" value="⑦ VAD 本地检测&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;RMS 能量 · 自适应噪声底 · 40 ms&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="100" y="470" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n8" value="⑧ LLM 客户端&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;stream=true · 带对话历史&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="390" y="580" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="n9" value="⑨ 切句" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="390" y="675" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n10" value="⑩ TTS 客户端（流式）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="390" y="745" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="n11" value="出站队列（唯一写入者）&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;PCM 二进制帧 + JSON 事件&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="390" y="825" width="180" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="dint" value="打断？&lt;br&gt;&lt;font style='font-size:10px'&gt;VAD 有声 且 正在出声&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=1.5;fontSize=11;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="80" y="575" width="220" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note-flow" value="&lt;b&gt;三层流式 —— 缺一层前功尽弃&lt;/b&gt;&lt;br&gt;① LLM 逐 token 吐出&lt;br&gt;② 按句切分，攒够一句立刻送走&lt;br&gt;③ TTS 逐块回传，第一块到就开播&lt;br&gt;&lt;br&gt;任一层退化成「攒齐再传」，前面的努力全白费。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCE8;strokeColor=#D6B656;align=left;verticalAlign=top;spacing=10;fontSize=11;fontColor=#7A5C00;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="925" width="390" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="note-int" value="&lt;b&gt;打断必须做三件事&lt;/b&gt;&lt;br&gt;① cancel 掉 LLM 和 TTS&lt;br&gt;② 清空服务端还没发出的队列&lt;br&gt;③ 通知前端停掉已排期的音频&lt;br&gt;&lt;br&gt;只做①的话，前端缓冲会把话说完。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCE8;strokeColor=#D6B656;align=left;verticalAlign=top;spacing=10;fontSize=11;fontColor=#7A5C00;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="450" y="925" width="390" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="note-lat" value="&lt;b&gt;延迟预算&lt;/b&gt;&lt;br&gt;大头是 STT 的 endpointing —— 等多久静音才算一句说完，300–800 ms，且是固有成本。&lt;br&gt;&lt;br&gt;首字响应通常 1–2 s。要压延迟，优先动 endpointing 和切句策略，这两个你能控制。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCE8;strokeColor=#D6B656;align=left;verticalAlign=top;spacing=10;fontSize=11;fontColor=#7A5C00;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="860" y="925" width="400" height="125" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c-stt" value="流式 STT 服务&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;Deepgram / 阿里 / 讯飞&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="470" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c-llm" value="LLM 服务&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;任何 OpenAI 兼容端点&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="580" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c-tts" value="流式 TTS 服务&lt;br&gt;&lt;font color='#666666' style='font-size:10px'&gt;MiniMax / 火山 / ElevenLabs&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=1.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="740" width="230" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="n1" target="n2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;" edge="1" parent="1" source="n2" target="n3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="④ WebSocket 二进制上行&#10;640 B / 20 ms" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1F4E79;strokeWidth=2;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#1F4E79;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n3" target="n5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="无条件全送" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;fontSize=10;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n5" target="n6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="同一帧" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;fontSize=10;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n5" target="n7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="190" y="405" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="is_final 的整句" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;fontSize=10;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n6" target="n8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="逐 token" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;fontSize=10;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n8" target="n9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="整句" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;fontSize=10;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n9" target="n10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="PCM 块" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=1.5;endArrow=blockThin;endFill=1;fontSize=10;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.4;exitY=1;exitDx=0;exitDy=0;entryX=0.4;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n10" target="n11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=1.5;endArrow=blockThin;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="n7" target="dint">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="cancel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=2;dashed=1;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#A96800;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dint" target="n8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="cancel" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=2;dashed=1;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#A96800;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dint" target="n10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="135" y="767" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="清空队列 + 发 clear 事件" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=2;dashed=1;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#A96800;fontFamily=PingFang SC;labelBackgroundColor=#EAF7EC;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dint" target="n11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="190" y="850" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#1F4E79;strokeWidth=2;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#1F4E79;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="n11" target="n12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="850" />
+              <mxPoint x="670" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="WebSocket 流式" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=1.5;dashed=1;startArrow=blockThin;startFill=1;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#A96800;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="n6" target="c-stt">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="SSE 流式" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=1.5;dashed=1;startArrow=blockThin;startFill=1;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#A96800;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="n8" target="c-llm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="SSE 流式" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D79B00;strokeWidth=1.5;dashed=1;startArrow=blockThin;startFill=1;endArrow=blockThin;endFill=1;fontSize=10;fontColor=#A96800;fontFamily=PingFang SC;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="n10" target="c-tts">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
