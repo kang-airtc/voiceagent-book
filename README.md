@@ -75,3 +75,11 @@
 | 向量检索 | Ollama + ChromaDB | |
 
 中文场景需注意：部分以英文为主的平台，其语音识别支持中文而语音合成不支持，向其提交中文文本不会报错，但输出结果不可用。选型时需分别确认识别与合成两侧。
+
+## 课程一览
+
+<p align="center">
+  <a href="https://www.bilibili.com/cheese/play/ss274159994">
+    <img src="figures/poster.png" width="420" alt="VoiceAgent 全栈实战课程海报">
+  </a>
+</p>
