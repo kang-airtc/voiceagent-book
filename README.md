@@ -2,7 +2,15 @@
 
 作者：**亢老师-AIRTC**
 
-请关注 B 站 [亢老师-AIRTC VoiceAgent 全栈实战](https://space.bilibili.com/394612055) 视频教程，学习更多 AI、RTC 等知识。
+请关注作者 B 站 **亢老师-AIRTC**，学习更多 AI、RTC 等知识。
+
+## 配套课程
+
+原理讲透之后，如何从零把它实现出来，在配套课程里：
+
+**[VoiceAgent 全栈实战](https://www.bilibili.com/cheese/play/ss274159994)**
+
+课程覆盖 Go 服务端、Next.js 前端、WebRTC 与 WHIP 信令、三段流水线、VAD 打断、RAG 长期记忆，以及一个复刻豆包语音界面的完整案例，全套源码打包提供。
 
 ---
 
@@ -42,14 +50,6 @@
 | 第10章 | DataChannel 数据传输 | 控制事件与转写文字的传输通道 | 已完成 |
 | 第11章 | 语音流走向详解 | 音频帧在整条链路上的完整走向 | 已完成 |
 | 第12章 | RAG 流程与原理详解 | 向量检索与事实抽取的双轨设计 | 已完成 |
-
-## 配套课程
-
-原理讲透之后，如何从零把它实现出来，在配套课程里：
-
-**VoiceAgent 全栈实战**：https://www.bilibili.com/cheese/play/ss274159994
-
-课程覆盖 Go 服务端、Next.js 前端、WebRTC 与 WHIP 信令、三段流水线、VAD 打断、RAG 长期记忆，以及一个复刻豆包语音界面的完整案例，全套源码打包提供。
 
 ## 仓库结构
 
