@@ -1,0 +1,78 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="加不加检索的差别">
+    <mxGraphModel dx="1040" dy="460" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="460" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="同一个问题，加不加检索差在哪" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="用户问的都是：我买的这个能退吗" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pa" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fdf7f7;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="480" height="298" as="geometry" />
+        </mxCell>
+        <mxCell id="pat" value="不加检索" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#9c2b20;" vertex="1" parent="1">
+          <mxGeometry x="48" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="问题" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="48" y="140" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="aa1" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="232" y="162" as="sourcePoint" /><mxPoint x="264" y="162" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="模型" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="266" y="140" width="180" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="一般来说 7 天内可以退货，具体还要看商家的政策" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="48" y="198" width="440" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="通用常识。听着挺像样，但不是这家店的规矩" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#9c2b20;" vertex="1" parent="1">
+          <mxGeometry x="48" y="272" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="只知道训练时见过的通用知识&#10;不知道的也会编一个像样的&#10;想让它知道新东西，得重新训练" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="304" width="440" height="76" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pb" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="92" width="480" height="298" as="geometry" />
+        </mxCell>
+        <mxCell id="pbt" value="加了检索" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="548" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="问题" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="548" y="140" width="122" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="cc1" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="674" y="162" as="sourcePoint" /><mxPoint x="700" y="162" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="c2" value="查你的资料" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="702" y="140" width="140" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="cc2" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="846" y="162" as="sourcePoint" /><mxPoint x="872" y="162" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="c3" value="模型" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="874" y="140" width="114" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="可以的，签收后 7 天内无理由退货，在我的订单里点申请就行" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="548" y="198" width="440" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="来自本店的资料。用户照着就能操作" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="548" y="272" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="通用知识加上递过去的资料&#10;资料里没有就说没有&#10;想让它知道新东西，往库里加一条" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="548" y="304" width="440" height="76" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="一句话概括：检索不改模型，只改问它的时候顺手递了什么资料。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="406" width="980" height="42" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

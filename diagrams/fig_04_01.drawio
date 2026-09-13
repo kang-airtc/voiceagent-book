@@ -1,0 +1,113 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="断句判定流程">
+    <mxGraphModel dx="1040" dy="640" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="640" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="判断一句话说完的依据是静音时长" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="700" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="不是听懂了什么：逐帧判语音还是静音，计数器累计静音时长，攒够 300 ms 才判定说完" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="900" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l1" value="①  麦克风音频" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="140" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="我想想" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="180" y="100" width="195" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="静音 200 ms" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=14;fontColor=#777777;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="100" width="97" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="啊" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="472" y="100" width="49" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="150 ms" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=14;fontColor=#777777;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="521" y="100" width="73" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="然后就这样" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="594" y="100" width="220" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="a6" value="静音 300 ms" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="814" y="100" width="146" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l2" value="②  VAD 逐帧判定" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="172" width="140" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v1" value="语音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="180" y="172" width="195" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v2" value="静音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=14;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="375" y="172" width="97" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v3" value="语音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="472" y="172" width="49" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v4" value="静音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=13;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="521" y="172" width="73" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v5" value="语音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="594" y="172" width="220" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v6" value="静音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=14;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="814" y="172" width="146" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="v-note" value="每 20 ms 判一次：这一帧像不像人在说话" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#999999;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="180" y="212" width="500" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l3" value="③  静音计数器" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="250" width="140" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="thline" value="" style="endArrow=none;html=1;strokeColor=#d79b00;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="258" as="sourcePoint" />
+            <mxPoint x="960" y="258" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="thlabel" value="阈值 300 ms" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="180" y="236" width="160" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="375" y="290" width="97" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="c1t" value="数到 200　清零" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="355" y="342" width="137" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="521" y="303" width="73" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="c2t" value="数到 150　清零" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="489" y="342" width="137" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="814" y="258" width="146" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="c3t" value="数满 300　触发" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="818" y="342" width="137" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="c-note" value="判为静音就累加，判为语音就清零重数" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#999999;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="180" y="364" width="500" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l4" value="④  判定这句说完" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f1x" value="识别结果标记为最终结果，这句话交给大语言模型开始回答" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="180" y="400" width="620" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="is_final" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;fontStyle=1;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="814" y="400" width="146" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="concl" value="句中换气、边想边说只要短于 300 ms 就仍算同一句。而用户说完最后一个字的那一刻，没有任何办法立刻知道他说完了：后面可能是 0.2 秒后的下半句，也可能是 3 秒后的改口。唯一的证据就是他安静了足够久。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="470" width="930" height="70" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

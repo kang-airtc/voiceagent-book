@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="RAG的两条线">
+    <mxGraphModel dx="1040" dy="480" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="检索增强生成：离线一次，在线每轮" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="模型训练时没见过你的产品手册、订单表和今天的报价。做法很朴素：先去资料库里找几段相关的，连同问题一起递给它" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lane1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fb;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="980" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="l1t" value="事先做好　离线，一次" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="48" y="112" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="o1" value="产品手册&#10;问答与订单" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="48" y="142" width="180" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="oa1" value="" style="endArrow=classic;html=1;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="230" y="173" as="sourcePoint" /><mxPoint x="262" y="173" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="o2" value="切成小块" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="264" y="142" width="180" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="oa2" value="" style="endArrow=classic;html=1;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="446" y="173" as="sourcePoint" /><mxPoint x="478" y="173" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="o3" value="每块算成一串数字&#10;向量化" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480" y="142" width="200" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="oa3" value="" style="endArrow=classic;html=1;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="682" y="173" as="sourcePoint" /><mxPoint x="714" y="173" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="o4" value="存进向量数据库&#10;一串数字对应一段原文" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="716" y="142" width="276" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lane2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="30" y="238" width="980" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="l2t" value="每次提问　在线，实时" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="48" y="250" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" value="用户这句话" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="48" y="280" width="180" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="qa1" value="" style="endArrow=classic;html=1;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="230" y="311" as="sourcePoint" /><mxPoint x="262" y="311" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="q2" value="同样算成一串数字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="264" y="280" width="180" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="qa2" value="" style="endArrow=classic;html=1;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="446" y="311" as="sourcePoint" /><mxPoint x="478" y="311" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="q3" value="拿去比对相似度&#10;找出最像的三到五段原文" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="480" y="280" width="200" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="qa3" value="" style="endArrow=classic;html=1;strokeColor=#999999;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="682" y="311" as="sourcePoint" /><mxPoint x="714" y="311" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="q4" value="连同问题一起塞进输入&#10;请模型依据这些资料作答" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="716" y="280" width="276" height="62" as="geometry" />
+        </mxCell>
+
+        <mxCell id="vline" value="" style="endArrow=classic;html=1;strokeColor=#d79b00;dashed=1;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="854" y="206" as="sourcePoint" /><mxPoint x="600" y="278" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="note" value="模型本身并没有被改动，也没有学到新知识。改变的只是每次递给它的输入里多了几段相关资料，相当于把闭卷考试变成了开卷考试。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="378" width="980" height="48" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

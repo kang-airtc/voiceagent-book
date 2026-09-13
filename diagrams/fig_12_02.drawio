@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="写入路径与查询路径">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="两条路径：一条提前准备，一条现场跑" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="写入路径慢一点没关系，它与通话无关；查询路径每轮对话都要走一遍，卡在延迟预算里" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="la" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="980" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="lat" value="写入路径　离线，提前灌好" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="48" y="104" width="944" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="w1" value="知识来源&#10;&#10;产品文档、常见问答、操作手册、过往对话记录" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="48" y="136" width="230" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="w2" value="切块&#10;&#10;每块 200 到 500 字，块之间留一点重叠，免得答案正好被切在接缝上" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="286" y="136" width="230" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="w3" value="向量化&#10;&#10;每一块变成一串数字，也就是向量空间里的一个点" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="524" y="136" width="230" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="w4" value="存进向量库&#10;&#10;向量和原文一起存。检索靠向量，递给模型的是原文" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="762" y="136" width="230" height="98" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lb" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="30" y="258" width="980" height="156" as="geometry" />
+        </mxCell>
+        <mxCell id="lbt" value="查询路径　在线，每一轮对话走一遍" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="48" y="270" width="944" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="识别出文本&#10;&#10;用户说的话转成文字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="48" y="302" width="182" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="向量化&#10;&#10;把问题也变成一串数字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="238" y="302" width="182" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="检索&#10;&#10;找出距离最近的几条，原文和相似度一起带回" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="428" y="302" width="182" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="组装输入&#10;&#10;资料加问题加指令，拼成一次请求" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="618" y="302" width="182" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="生成与播放&#10;&#10;模型出文字，逐句合成，边说边播" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;align=left;spacingLeft=12;verticalAlign=top;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="808" y="302" width="184" height="98" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lnk" value="" style="endArrow=classic;html=1;strokeColor=#d79b00;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="877" y="236" as="sourcePoint" /><mxPoint x="519" y="300" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="note" value="两条路径必须用同一个向量化模型。换了模型，两边的数字就不在同一个空间里，算出来的距离毫无意义，检索会安静地返回一堆不相干的内容，而且不报错。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="428" width="980" height="42" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

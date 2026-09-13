@@ -23,6 +23,11 @@ preview/
 final/
 full_book.md
 
+# publish/ 是 publish-platform 生成的平台发布副本：正文与 chapters/ 完全相同，
+# 只把图片路径换成了 CDN 绝对地址。源文件已在仓库里，副本没有入库的必要，
+# 而且每换一次 CDN 就全量重写，进 git 只会让 diff 失真。
+publish/
+
 # 任何 Word / PDF 都不进仓库。既避免误传出版社模板，
 # 也避免把 docx 生成物当成源文件管理。
 *.docx

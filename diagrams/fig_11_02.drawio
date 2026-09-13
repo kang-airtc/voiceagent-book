@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="下行六步">
+    <mxGraphModel dx="1040" dy="410" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="410" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="下行六步：文字变回你耳朵里的声音" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="同一条流水线反着走一遍。中间三步与上行一模一样，只是方向反了" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="① 起点　模型给出文字&#10;&#10;一个词元一个词元地吐，不等整段写完" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="② 变成数字　合成&#10;&#10;凑够一句就送去合成，直接返回 16 千赫兹的 PCM，又变回那串整数" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="92" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="③ 切成帧　20 毫秒一帧&#10;&#10;同样 320 个采样。必须按真实时间节奏发，不能一口气灌出去" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="92" width="313" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4" value="④ 压缩　Opus 编码&#10;&#10;同样压到约 80 字节。上下行用的是同一套编解码器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="208" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="⑤ 过网　RTP 打包发走&#10;&#10;同样每秒 50 个包，走的还是刚才那条 UDP 路" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="208" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="⑥ 落地　解码后送扬声器&#10;&#10;浏览器全自动完成抖动缓冲、解码与播放，这一段不需要写代码" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="208" width="313" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="把上行和下行竖着对齐看，切帧、编码、打包这三步完全相同。声音出去和回来走的是同一套动作，这也是一条 PeerConnection 就够用的原因。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="332" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

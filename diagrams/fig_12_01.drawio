@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="向量化与向量空间">
+    <mxGraphModel dx="1040" dy="410" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="410" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="机器凭什么能找出意思相近的内容" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="把句子变成数字，意思相近的数字也相近。于是找语义相似变成了算距离，一个纯数学问题" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pa" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="480" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pat" value="① 把每句话变成一串数字" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="48" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="q1" value="今天天气怎么样　→　0.21，-0.48，0.93 …" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="138" width="444" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="q2" value="今日天气如何　→　0.19，-0.51，0.90 …　数字几乎一样" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="190" width="444" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="q3" value="苹果股价多少　→　-0.72，0.33，0.11 …　差得很远" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="242" width="444" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="pac" value="这一步叫向量化，压成一串固定长度的数字，几百到几千个" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="292" width="444" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pb" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="530" y="92" width="480" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="pbt" value="② 意思相近的就落在一起" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="548" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sp" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#dddddd;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="548" y="138" width="444" height="148" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="天气相关" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="576" y="160" width="170" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="财经相关" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="800" y="180" width="170" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="dot" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b85450;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="602" y="211" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="dotl" value="用户刚问的那句落在哪一片，就检索到哪一类" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="566" y="250" width="410" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="pbc" value="检索就是在这个空间里找离它最近的几个点，取回对应的原文" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="548" y="292" width="444" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="常用的距离叫余弦相似度，算出来是 0 到 1 之间的一个数，越接近 1 越像。示意图画的是二维，实际是几百到几千维。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="340" width="980" height="46" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

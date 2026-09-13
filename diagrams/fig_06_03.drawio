@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="合成技术三代">
+    <mxGraphModel dx="1040" dy="420" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="合成音为什么现在听起来像人：三代做法" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="三代技术解决的是同一个问题的不同层面：先去掉接缝，再去掉机器味，最后学会某个具体的人怎么说话" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="30" y="106" width="316" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="g1t" value="第一代　拼接式" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="50" y="122" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g1s" value="concatenative" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="50" y="148" width="280" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="g1b" value="先录一大堆音节片段，用的时候拼起来。问题是接缝处一顿一顿，而且换个语气就没有对应素材可用。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="178" width="280" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="362" y="106" width="316" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="g2t" value="第二代　参数式" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="382" y="122" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g2s" value="parametric" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="382" y="148" width="280" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="g2b" value="用规则和统计模型算出声音参数，再合成波形。接缝问题没有了，但音色一听就是机器音。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="382" y="178" width="280" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="g3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="694" y="106" width="316" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="g3t" value="第三代　神经网络" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="714" y="122" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="g3s" value="端到端，当前主流" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="714" y="148" width="280" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="g3b" value="拿某个人几十小时的录音，让模型学这个人是怎么说话的：音色、语气、停顿习惯一起学。给几秒参考音频就能模仿，这就是音色克隆。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="714" y="178" width="280" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="音色克隆之所以成为可能，是因为第三代把音色也当成可学习的参数。前两代把发音和音色分开处理，音色由录音素材决定，换一个人就要重录一整套语料。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="326" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

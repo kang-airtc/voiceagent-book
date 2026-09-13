@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DataChannel在WebRTC里的位置">
+    <mxGraphModel dx="1040" dy="420" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="DataChannel 在 WebRTC 里的位置" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="媒体和数据共用同一条连接。ICE 试探出来的那条路、DTLS 握好的那次加密，DataChannel 直接复用" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="A" value="A 端" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="120" width="150" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="B" value="B 端" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="120" width="150" height="170" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pc" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="220" y="112" width="600" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="pct" value="一条 PeerConnection　同一条 ICE 路径，同一个 DTLS 加密会话" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="238" y="124" width="564" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="音频与视频轨道　走 RTP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="238" y="160" width="564" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="DataChannel　走 SCTP，传任意数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="238" y="226" width="564" height="58" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eL" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#999999;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="182" y="205" as="sourcePoint" /><mxPoint x="218" y="205" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="eR" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#999999;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="822" y="205" as="sourcePoint" /><mxPoint x="858" y="205" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="nt" value="建立它是零成本的" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="318" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nb" value="不需要新的握手、新的端口、新的防火墙规则，也天然是端到端加密的。连接一旦建立起来，这条数据通道就已经通了，直接发消息即可。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="348" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

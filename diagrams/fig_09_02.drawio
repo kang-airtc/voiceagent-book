@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="WHIP的活跃期">
+    <mxGraphModel dx="1040" dy="450" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="一通对话里，WHIP 只在头尾各出现一下" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="中间那段最长的对话它完全不参与，媒体全程走 UDP，与 HTTP 再无关系" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="96" width="290" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p1t" value="① 建连　一次往返" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="48" y="108" width="254" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p1b" value="POST /whip　送出 SDP offer&#10;&#10;201 Created　收回 SDP answer&#10;&#10;ICE 与 DTLS 握手自动完成" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="140" width="254" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#bbbbbb;" vertex="1" parent="1">
+          <mxGeometry x="340" y="96" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p2t" value="② 对话　占掉整场绝大部分时间" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="358" y="108" width="324" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p2b" value="音频双向流动，走 RTP over UDP&#10;&#10;服务端依次跑 STT 到 LLM 到 TTS&#10;&#10;转写文字、状态、打断通知另走一条通道" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="358" y="140" width="324" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="720" y="96" width="290" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p3t" value="③ 挂断　一次请求" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#9c2b20;" vertex="1" parent="1">
+          <mxGeometry x="738" y="108" width="254" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p3b" value="DELETE 建连时拿到的资源地址&#10;&#10;200 OK&#10;&#10;会话销毁" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="738" y="140" width="254" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="bar1" value="WHIP 在工作" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6c8ebf;strokeColor=none;fontColor=#ffffff;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="308" width="290" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="bar2" value="WHIP 已退场" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=none;fontColor=#555555;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="340" y="308" width="360" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="bar3" value="WHIP 回来一次" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b85450;strokeColor=none;fontColor=#ffffff;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="308" width="290" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="换成 WHIP 影响的只有建连和挂断两处代码。中间的处理链路、识别与合成的调用、打断逻辑，一行都不用动。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

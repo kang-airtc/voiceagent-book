@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="TTS与ASR的对称关系">
+    <mxGraphModel dx="1040" dy="420" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="合成与识别是同一条路的两个方向" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="两头对调，中间不变：识别把波形压成频谱再认出字，合成从字画出频谱再还原成波形" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lA" value="语音识别" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="106" width="150" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="波形" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="200" y="106" width="230" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="aA1" value="" style="endArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="432" y="133" as="sourcePoint" /><mxPoint x="486" y="133" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="a2" value="梅尔频谱" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="488" y="106" width="230" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="aA2" value="" style="endArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="720" y="133" as="sourcePoint" /><mxPoint x="774" y="133" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="a3" value="文字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="776" y="106" width="234" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lT" value="语音合成" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="196" width="150" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" value="文字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="200" y="196" width="230" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="tA1" value="" style="endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="432" y="223" as="sourcePoint" /><mxPoint x="486" y="223" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="t2" value="梅尔频谱" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="488" y="196" width="230" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="tA2" value="" style="endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="720" y="223" as="sourcePoint" /><mxPoint x="774" y="223" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="t3" value="波形" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="776" y="196" width="234" height="54" as="geometry" />
+        </mxCell>
+
+        <mxCell id="mid" value="两条路都经过梅尔频谱这一站" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontStyle=2;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="488" y="262" width="230" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="midline" value="" style="endArrow=none;html=1;strokeColor=#d79b00;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="603" y="160" as="sourcePoint" /><mxPoint x="603" y="196" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="note" value="梅尔频谱是两套系统共用的中间表示。它描述的是声音在各个频率上的能量分布，既能从波形算出来，也能反过来还原成波形。理解了其中一个方向，另一个方向反着读一遍即可。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="310" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

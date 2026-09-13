@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="建连只做一次">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="第一阶段：建立连接，只做一次" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="这四步全部走信令通道。走完之后音频才有路可走，此后不再重复" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b" value="浏览器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="92" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="s" value="服务端" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="92" width="200" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="lb" value="" style="endArrow=none;html=1;strokeColor=#bbbbbb;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="160" y="138" as="sourcePoint" /><mxPoint x="160" y="372" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="ls" value="" style="endArrow=none;html=1;strokeColor=#bbbbbb;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="880" y="138" as="sourcePoint" /><mxPoint x="880" y="372" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="t1" value="① offer　我支持这些音频编码，走这些网络路径" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="175" y="156" width="690" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="" style="endArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="160" y="184" as="sourcePoint" /><mxPoint x="880" y="184" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="t2" value="② answer　好，就按这一套来" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="175" y="204" width="690" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="" style="endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="880" y="232" as="sourcePoint" /><mxPoint x="160" y="232" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="t3" value="③ ICE 候选　我可能出现在这几个地址上" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="175" y="252" width="690" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="160" y="280" as="sourcePoint" /><mxPoint x="880" y="280" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="t4" value="④ 打洞与加密握手　由 WebRTC 自动完成，不需要自己写代码" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="175" y="300" width="690" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#d79b00;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="160" y="328" as="sourcePoint" /><mxPoint x="880" y="328" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="done" value="到这里通道打通：音频从此走 UDP 直连，不再经过信令" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="270" y="350" width="500" height="38" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="信令用什么协议由自己定：WebSocket、HTTP、gRPC、WHIP 都可以。WebRTC 规范只要求把 SDP 递到对方手里，不规定怎么递。唯一的限制是它不能依赖 WebRTC 本身，否则就成了先有鸡还是先有蛋。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="404" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

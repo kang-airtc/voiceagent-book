@@ -1,0 +1,120 @@
+<mxfile host="Electron" agent="Claude Code" type="device">
+  <diagram name="打断流程" id="barge-in-flow">
+    <mxGraphModel dx="1450" dy="960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1480" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="打断：让 AI 立刻闭嘴，比想象中麻烦" style="text;html=1;align=left;verticalAlign=middle;fontSize=21;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="28" width="800" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="因为 AI 的声音&lt;b&gt;同时堆在三个地方&lt;/b&gt; —— 从生成到进你耳朵要走三段，每一段里都存着还没播出来的声音。&lt;br&gt;只清掉一处，AI 会若无其事地把话说完。" style="text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#555555;fontFamily=PingFang SC;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1250" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r1" value="&lt;b style='font-size:14px'&gt;① 还没生成的&lt;/b&gt;&lt;br&gt;&lt;br&gt;LLM 还在写后面的句子&lt;br&gt;TTS 还在合成" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="140" width="340" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="&lt;b style='font-size:14px'&gt;② 生成了还没发的&lt;/b&gt;&lt;br&gt;&lt;br&gt;服务端出站队列里&lt;br&gt;攒着的 PCM 音频块" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#D5EBD8;strokeColor=#82B366;strokeWidth=2.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="520" y="140" width="340" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="&lt;b style='font-size:14px'&gt;③ 发了还没播的&lt;/b&gt;&lt;br&gt;&lt;br&gt;浏览器播放缓冲&lt;br&gt;&lt;font color='#B85450'&gt;可能已经排着好几秒&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#D4E4F7;strokeColor=#6C8EBF;strokeWidth=2.5;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="920" y="140" width="340" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ear" value="&lt;b&gt;用户&lt;br&gt;听到&lt;/b&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#F0F0F0;strokeColor=#909090;strokeWidth=2;fontSize=14;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="140" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="er1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="r1" target="r2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="r2" target="r3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="er3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="r3" target="ear">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="secB" value="打断的流程" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="288" width="400" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="t1" value="AI 正在说话" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#909090;strokeWidth=2;fontSize=13;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="332" width="340" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="用户开口 · VAD 40 ms 检出" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#909090;strokeWidth=2;fontSize=13;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="520" y="332" width="340" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="判定成立：VAD 有声 &lt;b&gt;且&lt;/b&gt; AI 正在出声" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#909090;strokeWidth=2;fontSize=13;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="920" y="332" width="340" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="et1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t1" target="t2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="et2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t2" target="t3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trig" value="⚡　触发打断 —— 下面三件事必须一起做" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=3;fontSize=16;fontStyle=1;fontColor=#8A3A36;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="428" width="1140" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="et3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.851;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t3" target="trig">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a1" value="&lt;b style='font-size:14px'&gt;① cancel 掉上下文&lt;/b&gt;&lt;br&gt;&lt;br&gt;LLM 停止生成&lt;br&gt;TTS 停止合成&lt;br&gt;&lt;font color='#888888'&gt;把源头关掉&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#D79B00;strokeWidth=3;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="524" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="&lt;b style='font-size:14px'&gt;② 倒空出站队列&lt;/b&gt;&lt;br&gt;&lt;br&gt;已经生成、但还没发出去的音频，全部丢弃&lt;br&gt;&lt;font color='#888888'&gt;把在途的截住&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#82B366;strokeWidth=3;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="520" y="524" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="&lt;b style='font-size:14px'&gt;③ 发 clear 事件给前端&lt;/b&gt;&lt;br&gt;&lt;br&gt;前端收到后，停掉所有已排期的音频源&lt;br&gt;&lt;font color='#888888'&gt;把已送达的作废&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6C8EBF;strokeWidth=3;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="920" y="524" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ea1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.149;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="trig" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="trig" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ea3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.851;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="trig" target="a3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="final" value="&lt;b style='font-size:15px'&gt;AI 立刻闭嘴&lt;/b&gt;&lt;br&gt;状态回到「在听」，等你说完这一句" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#D5EBD8;strokeColor=#82B366;strokeWidth=3;fontSize=12;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="520" y="700" width="340" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="ef1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82B366;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a1" target="final">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="290" y="680" /><mxPoint x="690" y="680" /></Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ef2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82B366;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a2" target="final">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ef3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#82B366;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="a3" target="final">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="1090" y="680" /><mxPoint x="690" y="680" /></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="secC" value="少做一件会怎样" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="800" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="w1" value="&lt;b&gt;漏了 ①&lt;/b&gt;&lt;br&gt;&lt;br&gt;TTS 继续合成，白烧钱；而且新音频还会源源不断涌进队列。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDECEA;strokeColor=#B85450;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#8A3A36;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="840" width="340" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="w2" value="&lt;b&gt;漏了 ②&lt;/b&gt;&lt;br&gt;&lt;br&gt;队列里攒的那几百毫秒照样发出去、照样播，AI 会「多说半句」。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDECEA;strokeColor=#B85450;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#8A3A36;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="520" y="840" width="340" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="w3" value="&lt;b&gt;漏了 ③&lt;/b&gt;&lt;br&gt;&lt;br&gt;浏览器缓冲里好几秒的音频照播不误 —— 用户眼里 AI 根本没停。&lt;b&gt;最常见的 bug。&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDECEA;strokeColor=#B85450;strokeWidth=2;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#8A3A36;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="920" y="840" width="340" height="115" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hint" value="三列上下对齐：声音堆在哪 → 怎么清 → 不清会怎样" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#909090;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="330" y="800" width="420" height="30" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

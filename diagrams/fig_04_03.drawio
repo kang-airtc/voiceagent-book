@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="两个VAD的分工">
+    <mxGraphModel dx="1040" dy="520" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="两个 VAD 各管一头" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="700" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="本地的那个负责快，云端的那个负责准。打断等不起网络往返，断句等得起" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="960" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cardL" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="30" y="94" width="440" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="badgeL" value="快" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d79b00;strokeColor=none;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="52" y="114" width="44" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="titL" value="本地 · 能量 VAD" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="108" y="114" width="340" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bodyL" value="纯浮点运算，代码量很小，40 ms 内先举手。糙：分不清人声和噪音，咳嗽、键盘声都算。但打断等不起一个网络往返，必须放在本地。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="52" y="158" width="396" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cardR" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="500" y="94" width="440" height="196" as="geometry" />
+        </mxCell>
+        <mxCell id="badgeR" value="准" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#82b366;strokeColor=none;fontSize=16;fontStyle=1;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="522" y="114" width="44" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="titR" value="云端 · 神经网络 VAD 与识别服务" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="578" y="114" width="350" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="bodyR" value="确认真的是人在说话。准：噪音、咳嗽都骗不过它。代价是要走网络，耗时在几百毫秒量级，快不起来。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="522" y="158" width="396" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="plus" value="+" style="text;html=1;align=center;verticalAlign=middle;fontSize=30;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="470" y="176" width="30" height="32" as="geometry" />
+        </mxCell>
+
+        <mxCell id="useT" value="两项能力各自用在哪里" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="316" width="500" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="use1" value="打断　=　能量 VAD 先举手（快）　+　识别服务确认识别出实词（准）　+　智能体正在出声" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="348" width="910" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="use2" value="断句　=　完全交给云端。本地能量 VAD 做不了，嘈杂环境下它会让静音计数器永远清零" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="400" width="910" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="concl" value="解法不是把本地的能量 VAD 换成神经网络，而是让云端识别服务当第二道确认：快的那个先触发，准的那个来兜底。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="458" width="910" height="26" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

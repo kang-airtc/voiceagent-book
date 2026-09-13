@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="流式识别的中间结果与最终结果">
+    <mxGraphModel dx="1040" dy="480" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="480" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="流式识别为什么会边说边改" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="760" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="同一句话在说的过程中被反复修正，改动的过程就是中间结果，确定不再改就是最终结果" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h1" value="听到的时长" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="96" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="此刻输出的文字" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="270" y="96" width="320" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="结果类型" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="620" y="96" width="390" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="hl" value="" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="126" as="sourcePoint" />
+            <mxPoint x="1010" y="126" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="r1a" value="0.3 秒" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="r1b" value="你" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="270" y="140" width="320" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c" value="中间结果　还会改" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="620" y="140" width="390" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2a" value="0.7 秒" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="196" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="r2b" value="你好" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="270" y="196" width="320" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c" value="中间结果　还会改" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="620" y="196" width="390" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3a" value="1.2 秒" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="252" width="220" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="r3b" value="你好吗" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="252" width="320" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c" value="最终结果　静音够久，定稿" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="620" y="252" width="390" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="whyT" value="根本原因：流式模型只能看过去，看不到未来" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="324" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="whyB" value="离线模型拿到的是整段音频，可以前后文互相印证。流式模型必须在用户说到一半时就给出结果，而后面到底还有没有字、是哪个字，此刻根本还没发生。所以它只能边猜边改。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="354" width="980" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="cn" value="中文尤其吃亏：没有词边界，同音字又扎堆，全靠上下文区分，而上下文恰恰是流式最缺的。这也是中文场景优先选用国内识别服务的原因。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="980" height="44" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

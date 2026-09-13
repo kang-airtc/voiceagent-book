@@ -1,0 +1,84 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="这条通道接到了哪儿">
+    <mxGraphModel dx="1040" dy="450" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="第三阶段：这条通道接到了哪儿" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="WebRTC 只在链路的两端出现：接麦克风的上行，和接扬声器的下行。中间三步与它无关" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="blane" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="200" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="bt" value="浏览器" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="48" y="110" width="164" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mic" value="麦克风" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="48" y="140" width="164" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="scr" value="界面上屏" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="48" y="200" width="164" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="spk" value="播放" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="48" y="260" width="164" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slane" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="100" width="450" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="st" value="服务端　WebRTC 服务与处理链路在同一台机器上" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="110" width="410" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="stt" value="STT　把音频转成文字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="580" y="140" width="410" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="" style="endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="785" y="189" as="sourcePoint" /><mxPoint x="785" y="199" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="llm" value="LLM　决定回什么" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="580" y="200" width="410" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="" style="endArrow=classic;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="785" y="249" as="sourcePoint" /><mxPoint x="785" y="259" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="tts" value="TTS　把文字合成为音频" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="580" y="260" width="410" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="l1" value="音频上行　WebRTC" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="240" y="138" width="310" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="endArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="214" y="164" as="sourcePoint" /><mxPoint x="576" y="164" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="l2" value="转写文字与回复文字　信令通道" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#5b4180;" vertex="1" parent="1">
+          <mxGeometry x="240" y="198" width="310" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=3;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="576" y="224" as="sourcePoint" /><mxPoint x="214" y="224" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="l3" value="音频下行　WebRTC" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="240" y="258" width="310" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="endArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="576" y="284" as="sourcePoint" /><mxPoint x="214" y="284" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="nt" value="为什么不在中间放一层转发" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="344" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nb" value="浏览器与服务端直接建连，音频一到就交给处理链路。中间若再经一层转发服务，每个包都要多走一跳，延迟随之增加，出问题时也多一处要排查的地方。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="374" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

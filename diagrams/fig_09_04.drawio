@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="硬拆成两个协议的代价">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="硬拆成两个协议要付出的代价" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="同样是一通双向语音对话，用一条连接和用两条连接，差别不只是多写一点代码" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h1" value="对比项" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="96" width="280" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="一条连接　写 sendrecv" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="330" y="96" width="330" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="两条连接　推流一条，拉流一条" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#9c2b20;" vertex="1" parent="1">
+          <mxGeometry x="680" y="96" width="330" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="hl" value="" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="30" y="128" as="sourcePoint" /><mxPoint x="1010" y="128" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="r1a" value="连接数量" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="280" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1b" value="1 条" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="330" y="140" width="330" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c" value="2 条" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="140" width="330" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2a" value="ICE 握手" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="188" width="280" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2b" value="1 次" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="330" y="188" width="330" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c" value="2 次" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="188" width="330" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3a" value="DTLS 会话" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="236" width="280" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r3b" value="1 个" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="330" y="236" width="330" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c" value="2 个" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="236" width="330" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r4a" value="建连耗时" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="284" width="280" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r4b" value="一次往返" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="330" y="284" width="330" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="r4c" value="翻倍" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="284" width="330" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r5a" value="两条流怎么关联" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="332" width="280" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="r5b" value="本来就在同一条连接上，不需要关联" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="330" y="332" width="330" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="r5c" value="协议里没有机制说明这两条属于同一次对话，要自己设计一套会话标识传来传去" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="680" y="332" width="330" height="66" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="最麻烦的是最后一行。服务端必须知道该把哪一路合成音频送给哪个上行连接，这套对应关系拆开之后就得自己维护。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="412" width="980" height="46" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

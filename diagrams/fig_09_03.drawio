@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="为什么不配WHEP">
+    <mxGraphModel dx="1040" dy="440" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="440" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="WHIP 配 WHEP 的场景，与语音智能体的场景不同" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="940" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="WHIP 负责把流推上去，WHEP 负责把流拉下来。两个协议分开，是因为推的人和看的人本来就不是同一个" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pa" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="480" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="pat" value="原本的场景　一对多广播" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="48" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="anchor" value="主播" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="48" y="186" width="110" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="lw1" value="WHIP" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="158" y="188" width="56" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="aw1" value="" style="endArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="160" y="214" as="sourcePoint" /><mxPoint x="212" y="214" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="srv" value="服务器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="214" y="186" width="110" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="lw2" value="WHEP" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#5b4180;" vertex="1" parent="1">
+          <mxGeometry x="324" y="188" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vA" value="观众 A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="384" y="140" width="104" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vB" value="观众 B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="384" y="194" width="104" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vC" value="观众 C" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="384" y="248" width="104" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="eA" value="" style="endArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="326" y="214" as="sourcePoint" /><mxPoint x="382" y="160" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="eB" value="" style="endArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="326" y="214" as="sourcePoint" /><mxPoint x="382" y="214" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="eC" value="" style="endArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="326" y="214" as="sourcePoint" /><mxPoint x="382" y="268" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="pac" value="推流的人与看的人不是同一个，各建各的连接，两个协议自然要分开" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="300" width="440" height="36" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pb" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="92" width="480" height="252" as="geometry" />
+        </mxCell>
+        <mxCell id="pbt" value="语音智能体的场景　一对一双向" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="548" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="usr" value="用户" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="552" y="186" width="126" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="srv2" value="服务器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="862" y="186" width="126" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="pcL" value="一条 PeerConnection" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="678" y="174" width="184" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pcA" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="682" y="212" as="sourcePoint" /><mxPoint x="858" y="212" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="pcS" value="a=sendrecv" style="text;html=1;align=center;verticalAlign=middle;fontSize=14;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="678" y="222" width="184" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="pbc" value="同一个人同时收发。SDP 里写一行 sendrecv 就把上行和下行一起协商了，一条连接够用，不需要再配一个拉流协议" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="548" y="288" width="440" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="是否需要配 WHEP，取决于收流方与发流方是不是同一个端点，而不是取决于音频是单向还是双向。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

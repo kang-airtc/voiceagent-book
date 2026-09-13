@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="每轮重新拼输入">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="每一轮对话都要重新拼一次完整输入" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="识别出来的那句话不是直接丢给模型的。模型本身没有记忆，不给它上下文，它就什么都不知道" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="src" value="识别出的文字&#10;你们退货政策是什么" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="30" y="106" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="232" y="196" as="sourcePoint" /><mxPoint x="266" y="196" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="268" y="106" width="380" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="boxt" value="拼成一次完整的输入" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="286" y="118" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="system　人设和约束，例如要求用口语化中文作答" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="286" y="148" width="344" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="history　前几轮说了什么，有上限，需要截断" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="286" y="194" width="344" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="user　　用户刚说的这一句" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#d79b00;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="286" y="240" width="344" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a2" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="650" y="196" as="sourcePoint" /><mxPoint x="684" y="196" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="llm" value="大语言模型" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="686" y="106" width="150" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="838" y="196" as="sourcePoint" /><mxPoint x="872" y="196" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="out1" value="逐 token 流式吐出回复" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="874" y="106" width="136" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="out2" value="攒够一句就送去合成" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="874" y="202" width="136" height="84" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n1" value="模型无状态这一点是整个设计的前提" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="322" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="模型不记得上一轮说过什么，所谓的多轮对话，是每次把历史重新塞进输入里造出来的。历史越长输入越大，费用和首字延迟同步上升，所以必须设上限并截断。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="352" width="980" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="流式输出是首字延迟能压下来的前提：不等整段写完，吐出的内容攒够一句就立刻送去合成。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="410" width="980" height="26" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

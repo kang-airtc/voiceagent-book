@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="连上之后的两条通道">
+    <mxGraphModel dx="1040" dy="450" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="第二阶段：连上之后，两条通道一直并行" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="声音走一条路，控制走另一条路。两条通道协议不同、频率不同，互不干扰" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b" value="浏览器" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="170" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="s" value="服务端" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="100" width="170" height="220" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="音频　双向流动&#10;WebRTC 走 UDP，每 20 毫秒一个包" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="240" y="106" width="560" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="c1l" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="202" y="149" as="sourcePoint" /><mxPoint x="238" y="149" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="c1r" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#6c8ebf;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="802" y="149" as="sourcePoint" /><mxPoint x="838" y="149" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="c2" value="转写文字　状态　打断通知&#10;信令通道，文本消息，一通对话总共几十条" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="240" y="222" width="560" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="c2l" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="202" y="265" as="sourcePoint" /><mxPoint x="238" y="265" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="c2r" value="" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#9673a6;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="802" y="265" as="sourcePoint" /><mxPoint x="838" y="265" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="nt" value="打断为什么必须走信令通道" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="330" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="nb" value="检测到用户插话时，双方都要立刻做清理：浏览器丢掉还没播完的音频，服务端停掉正在生成的回复，把合成队列里排着的内容一并清空。这些动作靠音频本身传不了，只能由信令通道发一条消息触发。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

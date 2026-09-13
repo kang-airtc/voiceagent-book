@@ -1,0 +1,129 @@
+<mxfile host="Electron" agent="Claude Code" type="device">
+  <diagram name="VAD 与打断原理" id="vad-barge-in">
+    <mxGraphModel dx="1500" dy="920" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="920" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="VAD 是怎么判断「有人在说话」的" style="text;html=1;align=left;verticalAlign=middle;fontSize=21;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="760" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="算每一帧音频的音量（RMS 能量），超过阈值就算有人在说话。没有神经网络，几十行浮点运算。&lt;br&gt;正因为糙，它才能在 40 ms 内出结果 —— 而这个速度，是打断能成立的前提。" style="text;html=1;align=left;verticalAlign=top;fontSize=13;fontColor=#555555;fontFamily=PingFang SC;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="40" y="72" width="1100" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="plotbg" value="" style="rounded=0;html=1;fillColor=#FAFAFA;strokeColor=#E0E0E0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="170" width="1300" height="365" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ax-y" style="edgeStyle=none;html=1;strokeColor=#909090;strokeWidth=1.5;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="530" as="sourcePoint" />
+            <mxPoint x="120" y="176" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ax-x" style="edgeStyle=none;html=1;strokeColor=#909090;strokeWidth=1.5;endArrow=blockThin;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="530" as="sourcePoint" />
+            <mxPoint x="1414" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ax-ylbl" value="帧能量" style="text;html=1;align=center;verticalAlign=middle;fontSize=12;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="180" width="75" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="ax-xlbl" value="时间（每帧 20 ms）" style="text;html=1;align=right;verticalAlign=middle;fontSize=12;fontColor=#808080;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="538" width="235" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="thr-line" style="edgeStyle=none;html=1;strokeColor=#B85450;strokeWidth=2;dashed=1;dashPattern=8 5;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="435" as="sourcePoint" />
+            <mxPoint x="1414" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="thr-lbl" value="阈值 ＝ 噪声底 × 3" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#B85450;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="136" y="404" width="220" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nf-line" style="edgeStyle=none;html=1;strokeColor=#7B5EA8;strokeWidth=2;dashed=1;dashPattern=8 5;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="500" as="sourcePoint" />
+            <mxPoint x="1414" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nf-lbl" value="噪声底（跟着环境实时变）" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#7B5EA8;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="136" y="458" width="270" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="curve" style="edgeStyle=none;html=1;rounded=0;strokeColor=#3D3D3D;strokeWidth=2;endArrow=none;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="502" as="sourcePoint" />
+            <mxPoint x="1400" y="501" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="170" y="497" /><mxPoint x="200" y="504" /><mxPoint x="230" y="496" /><mxPoint x="260" y="503" /><mxPoint x="290" y="498" /><mxPoint x="320" y="502" /><mxPoint x="350" y="495" /><mxPoint x="380" y="503" />
+              <mxPoint x="400" y="500" /><mxPoint x="412" y="478" /><mxPoint x="422" y="250" /><mxPoint x="432" y="478" /><mxPoint x="444" y="501" />
+              <mxPoint x="470" y="498" /><mxPoint x="500" y="503" /><mxPoint x="530" y="496" /><mxPoint x="560" y="502" /><mxPoint x="590" y="499" />
+              <mxPoint x="608" y="492" /><mxPoint x="618" y="435" /><mxPoint x="628" y="340" /><mxPoint x="645" y="285" /><mxPoint x="665" y="305" /><mxPoint x="685" y="265" /><mxPoint x="705" y="295" /><mxPoint x="725" y="270" /><mxPoint x="745" y="305" /><mxPoint x="765" y="275" /><mxPoint x="785" y="260" /><mxPoint x="805" y="300" /><mxPoint x="825" y="280" /><mxPoint x="845" y="265" /><mxPoint x="865" y="295" /><mxPoint x="885" y="272" /><mxPoint x="905" y="258" /><mxPoint x="925" y="290" /><mxPoint x="945" y="275" /><mxPoint x="965" y="305" /><mxPoint x="985" y="282" /><mxPoint x="1005" y="266" /><mxPoint x="1025" y="300" /><mxPoint x="1045" y="340" /><mxPoint x="1058" y="425" /><mxPoint x="1070" y="478" />
+              <mxPoint x="1090" y="500" /><mxPoint x="1130" y="496" /><mxPoint x="1170" y="503" /><mxPoint x="1210" y="498" /><mxPoint x="1250" y="502" /><mxPoint x="1290" y="496" /><mxPoint x="1330" y="503" /><mxPoint x="1370" y="499" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="span-speech" value="判定「有人在说话」" style="rounded=0;html=1;fillColor=#D5EBD8;strokeColor=none;opacity=45;fontSize=11;fontStyle=1;fontColor=#2D6A31;fontFamily=PingFang SC;verticalAlign=bottom;spacingBottom=4;" vertex="1" parent="1">
+          <mxGeometry x="628" y="180" width="430" height="350" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m1" value="①" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B85450;strokeWidth=2.5;fontSize=14;fontStyle=1;fontColor=#B85450;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="408" y="200" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="②" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2D6A31;strokeWidth=2.5;fontSize=14;fontStyle=1;fontColor=#2D6A31;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="618" y="200" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="③" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7B5EA8;strokeWidth=2.5;fontSize=14;fontStyle=1;fontColor=#7B5EA8;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1215" y="450" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lg1" value="&lt;b&gt;① 咳嗽 / 关门声&lt;/b&gt;&lt;br&gt;&lt;br&gt;只有 1 帧冲过阈值。VAD 要求&lt;b&gt;连续 2 帧&lt;/b&gt;（40 ms）才算数，所以这种尖峰被直接滤掉，不会误触发打断。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDECEA;strokeColor=#B85450;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#8A3A36;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="580" width="420" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lg2" value="&lt;b&gt;② 真人开口&lt;/b&gt;&lt;br&gt;&lt;br&gt;能量连续超过阈值，到第 2 帧就判定「有人在说话」。整段说话期间这个状态一直保持。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAF7EC;strokeColor=#82B366;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#2D6A31;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="560" y="580" width="420" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="lg3" value="&lt;b&gt;③ 低于阈值的帧&lt;/b&gt;&lt;br&gt;&lt;br&gt;拿来更新噪声底。&lt;b&gt;说话的帧不学&lt;/b&gt; —— 学进去阈值会被自己抬高，越说越检测不到。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F3EEF9;strokeColor=#7B5EA8;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#5B4180;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="580" width="420" height="110" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sec2" value="VAD 只是触发源 —— 真要打断，还得再满足一个条件" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#1A1A1A;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="720" width="700" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="in1" value="VAD：检测到有人在说话" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#FFE6CC;strokeColor=#D79B00;strokeWidth=2;fontSize=13;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="770" width="300" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="in2" value="agent：正在出声（在播音频）" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#D5EBD8;strokeColor=#82B366;strokeWidth=2;fontSize=13;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="120" y="845" width="300" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="andgate" value="且" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#4D4D4D;strokeWidth=2.5;fontSize=20;fontStyle=1;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="480" y="792" width="86" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="out" value="&lt;b style='font-size:14px'&gt;触发打断&lt;/b&gt;&lt;br&gt;&lt;br&gt;① cancel 掉 LLM 和 TTS&lt;br&gt;② 清空服务端未发出的队列&lt;br&gt;③ 通知前端停掉已排期的音频" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;strokeWidth=2.5;align=left;verticalAlign=middle;spacing=14;fontSize=12;fontColor=#8A3A36;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="630" y="770" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="note-why" value="&lt;b&gt;为什么必须两个条件同时成立&lt;/b&gt;&lt;br&gt;&lt;br&gt;只看 VAD 的话：AI 还在思考、嘴还没张开时你说话，也会被判成打断 —— 但那其实是正常的一轮对话开始。&lt;br&gt;&lt;br&gt;所以「正在出声」这个状态要在&lt;b&gt;第一块音频真正播出去时&lt;/b&gt;才置位，而不是在开始请求 LLM 时。" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFCE8;strokeColor=#D6B656;align=left;verticalAlign=top;spacing=12;fontSize=12;fontColor=#7A5C00;fontFamily=PingFang SC;" vertex="1" parent="1">
+          <mxGeometry x="970" y="770" width="450" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e-in1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="in1" target="andgate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-in2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#4D4D4D;strokeWidth=2;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="in2" target="andgate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-out" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B85450;strokeWidth=2.5;endArrow=blockThin;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="andgate" target="out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

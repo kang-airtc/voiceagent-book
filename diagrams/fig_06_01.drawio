@@ -1,0 +1,93 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="TTS四步">
+    <mxGraphModel dx="1040" dy="560" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="从一句文字到一段能播的声音，要走四步" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="合成不是把提前录好的字拼起来播。它更接近播音员拿到稿子：先弄清每个字念什么，再定用什么语气，然后在心里听出这句话的样子，最后发出声音" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="112" width="235" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c1n" value="①　先把字读懂" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="48" y="126" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c1s" value="文本归一化与注音" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="48" y="152" width="200" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c1b" value="把 2025 年读成二零二五年，把 3.14 读成三点一四。多音字要挑对：重要读 zhòng，重复读 chóng。这一步还没碰声音，纯粹是文字处理。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="182" width="200" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="283" y="112" width="235" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c2n" value="②　决定怎么念" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="301" y="126" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c2s" value="韵律预测" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="301" y="152" width="200" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c2b" value="每个字念多长、音高多少、哪里加重、哪里停顿、句末升调还是降调。同一句话念法不同，听感差别极大。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="301" y="182" width="200" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="536" y="112" width="235" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c3n" value="③　画出声音的样子" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="554" y="126" width="210" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c3s" value="声学模型输出梅尔频谱" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="554" y="152" width="210" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c3b" value="此刻声音还没真正出来，得到的只是一张图：哪一刻高、哪一刻低、哪一刻响。相当于播音员心里已经听到了这句话。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="554" y="182" width="200" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="789" y="112" width="221" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="c4n" value="④　图纸变成真声音" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="807" y="126" width="200" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="c4s" value="声码器" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="807" y="152" width="200" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="c4b" value="图纸只写了该有什么声音，没写空气具体怎么震。差的这半边由模型补出来，才成为喇叭能播的声波。补得好不好直接决定听感是干净还是发闷。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="807" y="182" width="186" height="146" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ar1" value="" style="endArrow=classic;html=1;strokeColor=#aaaaaa;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="265" y="227" as="sourcePoint" /><mxPoint x="283" y="227" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="ar2" value="" style="endArrow=classic;html=1;strokeColor=#aaaaaa;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="518" y="227" as="sourcePoint" /><mxPoint x="536" y="227" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="ar3" value="" style="endArrow=classic;html=1;strokeColor=#aaaaaa;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="771" y="227" as="sourcePoint" /><mxPoint x="789" y="227" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="pT" value="供应商开放的参数，对应的就是这四步中的某一步" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="378" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" value="voice　音色　→　第 ③ 步，声学模型是拿谁的录音训练的" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="412" width="980" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="speed、pitch、volume　→　第 ② 步的韵律" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="454" width="980" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="sample_rate、format　→　第 ④ 步声码器的输出规格" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="496" width="980" height="36" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

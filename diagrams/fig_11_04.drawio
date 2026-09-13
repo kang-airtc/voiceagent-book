@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="所谓流">
+    <mxGraphModel dx="1040" dy="400" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="所谓流，就是同一时刻每一帧都在不同的位置上" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="960" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="它不是一整段音频，而是一串 20 毫秒的小块，首尾相接地往前挪" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="f1" value="第 100 帧&#10;&#10;正从扬声器出声" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=12;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="96" width="188" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="第 101 帧&#10;&#10;在浏览器的抖动缓冲里排队" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;align=left;spacingLeft=12;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="226" y="96" width="188" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="第 102 帧&#10;&#10;还在网络上飞" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=12;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="422" y="96" width="188" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="第 103 帧&#10;&#10;服务端刚编码完，等着发" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;align=left;spacingLeft=12;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="618" y="96" width="188" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" value="第 105 帧&#10;&#10;合成还没做到这里，根本没生出来" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=12;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="814" y="96" width="196" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="axis" value="" style="endArrow=classic;startArrow=none;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="1010" y="236" as="sourcePoint" /><mxPoint x="30" y="236" as="targetPoint" /></mxGeometry>
+        </mxCell>
+        <mxCell id="axl" value="越往左，离用户的耳朵越近" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="40" y="242" width="500" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="n1" value="用户在听第 100 帧的时候，第 105 帧还没被生成出来。这就是首字延迟能压下来的原因：不必等整段回答写完，前面的帧已经在路上了。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="278" width="980" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="也正因为如此，打断时要同时清三个地方：还没生成的取消掉，服务端排着队的丢掉，浏览器缓冲里的清空。少清一处，回复就会多说半句。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="326" width="980" height="42" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

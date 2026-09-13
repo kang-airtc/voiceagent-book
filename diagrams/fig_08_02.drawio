@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="媒体协商与网络协商">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="建连这一步里实际发生的两轮协商" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="谈的是两件事：用什么编码，以及从哪个地址连过去。两轮都成功，连接才建立得起来" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="laneA" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="480" height="298" as="geometry" />
+        </mxCell>
+        <mxCell id="laneAt" value="媒体协商　谈用什么编码" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="48" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="浏览器　createOffer　生成一份 offer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="138" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="浏览器　setLocalDescription　存成本地描述" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="186" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="通过信令通道把这份 SDP 送到服务端" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="234" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="服务端　createAnswer 与 setLocalDescription，回传 SDP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="282" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="a5" value="浏览器　setRemoteDescription　记下对方的描述" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="48" y="330" width="444" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="laneB" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="530" y="92" width="480" height="298" as="geometry" />
+        </mxCell>
+        <mxCell id="laneBt" value="网络协商　谈从哪个地址连" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="548" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="浏览器　收集自己可能的候选地址" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="548" y="138" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="通过信令通道把候选地址送到服务端" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="548" y="186" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="服务端　addIceCandidate　记下对方的地址" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="548" y="234" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="服务端　同样收集并回送自己的候选地址" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="548" y="282" width="444" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" value="浏览器　addIceCandidate　两边地址都齐了" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="548" y="330" width="444" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="常见的音频编码有 Opus、G.711、G.729，视频侧同样要走一轮媒体协商。两轮谈完打洞和加密握手自动完成，这部分不需要自己写代码。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="404" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

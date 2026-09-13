@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="从声波到频谱">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="第一步：把声音变成模型能处理的形式" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="760" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="识别不是听懂整句再翻译，而是把声音切成一帧帧，逐帧猜这是什么音，再把一串猜测拼成字" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="960" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="290" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b1n" value="①" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="50" y="116" width="40" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b1t" value="声波变成一串数字" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="86" y="116" width="220" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b1b" value="每秒采 16000 个点，空气的气压变化被记录成一串整数" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="154" width="250" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ar1" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="180" as="sourcePoint" />
+            <mxPoint x="366" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="b2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="376" y="100" width="290" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b2n" value="②" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="396" y="116" width="40" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b2t" value="切成一帧帧" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="432" y="116" width="220" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b2b" value="每帧 20 ms。在这么短的时间内，声音特征基本不变" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="396" y="154" width="250" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ar2" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="676" y="180" as="sourcePoint" />
+            <mxPoint x="712" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="b3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="722" y="100" width="290" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="b3n" value="③" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;fontColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="742" y="116" width="40" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b3t" value="每帧算出频谱特征" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="778" y="116" width="220" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b3b" value="不看波形，看频率成分的分布。人耳听到的也正是这个" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="742" y="154" width="250" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="whyT" value="为什么要转成频谱" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="296" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="whyB" value="同一个音，不同人说、大声说和小声说，波形完全不同；但频率成分的分布是相似的。换成频谱之后，模型要辨认的对象就稳定多了。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="326" width="980" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="这三步合称前端处理，它不做任何识别，只负责把连续的声音整理成一串定长、特征稳定的向量，交给后面的模型逐帧判断。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="392" width="980" height="44" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="每条通道单独配置">
+    <mxGraphModel dx="1040" dy="430" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="430" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="同一条连接上可以开好几条通道，各配各的" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="940" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="可靠性和顺序是逐条设置的。数据的性质不同，该给的保证也不同" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h1" value="通道" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="96" width="220" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="怎么配" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="270" y="96" width="240" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="理由" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="530" y="96" width="480" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="hl" value="" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="30" y="128" as="sourcePoint" /><mxPoint x="1010" y="128" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="r1a" value="控制指令" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="142" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r1b" value="可靠　有序" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="270" y="142" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c" value="指令不能丢，顺序也不能乱。先静音后取消和先取消后静音是两个结果" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fb;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="530" y="142" width="480" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2a" value="转写文字" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="208" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r2b" value="可靠　有序" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="270" y="208" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c" value="文字要完整，缺一句就读不通，次序颠倒同样看不懂" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fb;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="530" y="208" width="480" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3a" value="光标位置" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="274" width="220" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r3b" value="不可靠　无序" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="270" y="274" width="240" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c" value="旧位置没有意义，丢了就丢了，不值得为它重传或排队" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8f9fb;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="530" y="274" width="480" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="默认是可靠加有序。要放宽可以设成不重传、超时即放弃、或者先到先算。语音智能体里的转写文字和打断通知都属于不能丢的那一类，用默认配置即可。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="348" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

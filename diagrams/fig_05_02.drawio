@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="逐帧猜测与解码">
+    <mxGraphModel dx="1040" dy="560" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="第二步与第三步：逐帧猜测，再合并成字" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="以说出“你好”为例。声学模型对每一帧独立给出一个猜测，它不认识字，只知道这一帧最像什么" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lab1" value="每帧一个猜测" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="98" width="170" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" value="_" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=17;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="210" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" value="你" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="286" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f3" value="你" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="362" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f4" value="你" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="438" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" value="_" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=17;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="514" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f6" value="_" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=17;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="590" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f7" value="好" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="666" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f8" value="好" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="742" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f9" value="好" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="818" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="f10" value="_" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=17;fontColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="894" y="98" width="76" height="46" as="geometry" />
+        </mxCell>
+
+        <mxCell id="blankNote" value="灰色的下画线是空白符号，表示这一帧没有新内容要输出。有了它，模型就不必纠结一个音究竟跨几帧：说得长就多吐几帧同样的字，交给下一步收拾。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="158" width="980" height="44" as="geometry" />
+        </mxCell>
+
+        <mxCell id="stepT" value="解码：合并重复，去掉空白" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="220" width="400" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d1l" value="原始输出" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="30" y="256" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="_　你　你　你　_　_　好　好　好　_" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="210" y="256" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d2l" value="合并连续重复" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="30" y="308" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="_　你　_　好　_" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="210" y="308" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="d3l" value="去掉空白符号" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#777777;" vertex="1" parent="1">
+          <mxGeometry x="30" y="360" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="你　好" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=17;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="360" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eggT" value="一个副产物" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="428" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="eggB" value="连续的空白符号正好对应这段没有人说话。因此不少流式识别服务并不单独运行一套语音活动检测，直接读取声学模型的空白输出即可，判断依据与识别本身天然一致。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="458" width="980" height="48" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -40,68 +40,115 @@ chapters:
   title: 对话打断：VAD 原理与打断流程
   episode: EP03
   part: 二 · 对话的节奏
-  status: not_started
+  status: draft
   file: chapters/chapter_03.md
+  sections:
+  - 3.1 语音活动检测的判定方法
+  - 3.2 打断成立的两个条件
+  - 3.3 打断的执行过程
+  - 3.4 检测速度与实现规模
 
 - id: '04'
   title: 断句原理：本地 VAD 与神经网络 VAD
   episode: EP04
   part: 二 · 对话的节奏
-  status: not_started
+  status: draft
   file: chapters/chapter_04.md
+  sections:
+  - 4.1 断句的判定依据
+  - 4.2 能量 VAD 为何不能承担断句
+  - 4.3 两个 VAD 的分工
 
 - id: '05'
   title: 实时语音识别的 ASR 原理
   episode: EP05
   part: 三 · 听见与说出
-  status: not_started
+  status: draft
   file: chapters/chapter_05.md
+  sections:
+  - 5.1 前端处理
+  - 5.2 逐帧猜测与解码
+  - 5.3 流式识别的中间结果与最终结果
+  - 5.4 训练与供应商选择
 
 - id: '06'
   title: 文字转语音的 TTS 原理
   episode: EP06
   part: 三 · 听见与说出
-  status: not_started
+  status: draft
   file: chapters/chapter_06.md
+  sections:
+  - 6.1 从文字到声音的四个步骤
+  - 6.2 合成与识别的对称关系
+  - 6.3 三代合成技术
+  - 6.4 流式合成与传输
 
 - id: '07'
   title: LLM 与 RAG 的基本原理
   episode: EP07
   part: 四 · 想
-  status: not_started
+  status: draft
   file: chapters/chapter_07.md
+  sections:
+  - 7.1 智能体中的模型环节
+  - 7.2 让模型用上私有资料
+  - 7.3 选型上的两个判断
 
 - id: '08'
   title: WebRTC 在 VoiceAgent 中的基本流程
   episode: EP08
   part: 五 · 声音怎么传过去
-  status: not_started
+  status: draft
   file: chapters/chapter_08.md
+  sections:
+  - 8.1 第一阶段：建立连接
+  - 8.2 第二阶段：连上之后
+  - 8.3 第三阶段：这条通道接到了哪儿
 
 - id: '09'
   title: WHIP 协议详解
   episode: EP09
   part: 五 · 声音怎么传过去
-  status: not_started
+  status: draft
   file: chapters/chapter_09.md
+  sections:
+  - 9.1 一次 HTTP 往返完成建连
+  - 9.2 WHIP 在一通对话里的位置
+  - 9.3 为什么不配一个 WHEP
 
 - id: '10'
   title: DataChannel 数据传输
   episode: EP10
   part: 五 · 声音怎么传过去
-  status: not_started
+  status: draft
   file: chapters/chapter_10.md
+  sections:
+  - 10.1 它在连接里的位置
+  - 10.2 能传什么
+  - 10.3 多条通道各配各的
+  - 10.4 两个绕不开的限制
 
 - id: '11'
   title: 语音流走向详解
   episode: EP11
   part: 五 · 声音怎么传过去
-  status: not_started
+  status: draft
   file: chapters/chapter_11.md
+  sections:
+  - 11.1 上行：声音变成文字
+  - 11.2 下行：文字变回声音
+  - 11.3 三个贯穿全程的数字
+  - 11.4 所谓的流是什么形态
 
 - id: '12'
   title: RAG 流程与原理详解
   episode: EP12
   part: 四 · 想
-  status: not_started
+  status: draft
   file: chapters/chapter_12.md
+  sections:
+  - 12.1 原理：怎么找出意思相近的内容
+  - 12.2 两条路径
+  - 12.3 递给模型的那份输入
+  - 12.4 加与不加的实际差别
+  - 12.5 什么时候该引入

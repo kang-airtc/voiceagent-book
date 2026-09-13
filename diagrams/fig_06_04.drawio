@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="流式合成的切分粒度">
+    <mxGraphModel dx="1040" dy="450" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="流式合成为什么按句切，而不按字切" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="800" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="第一句合成完就开始播，不等整段。切得越细开播越早，但切到一定程度韵律就崩了" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h1" value="切分粒度" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="96" width="230" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="开始播放的时机" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="280" y="96" width="270" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="韵律是否成立" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="570" y="96" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="hl" value="" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"><mxPoint x="30" y="126" as="sourcePoint" /><mxPoint x="1010" y="126" as="targetPoint" /></mxGeometry>
+        </mxCell>
+
+        <mxCell id="r1a" value="按字切" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="140" width="230" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r1b" value="最早" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="280" y="140" width="270" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r1c" value="不成立。逐字合成把语调切得支离破碎，听起来像在念单字表" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="570" y="140" width="440" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2a" value="按句切" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="202" width="230" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r2b" value="够早" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="280" y="202" width="270" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r2c" value="成立。一句之内升降调、重音、停顿都定得下来" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="570" y="202" width="440" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3a" value="整段合成完再播" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="264" width="230" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r3b" value="最晚，首字延迟成倍增加" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="280" y="264" width="270" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="r3c" value="成立，但多等来的自然度提升有限，不值这个延迟" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#cccccc;fontSize=15;align=left;spacingLeft=14;" vertex="1" parent="1">
+          <mxGeometry x="570" y="264" width="440" height="52" as="geometry" />
+        </mxCell>
+
+        <mxCell id="whyT" value="为什么韵律必须以句为单位" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="340" width="600" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="whyB" value="句末该降调、疑问句该升调、哪个字该重读，这些只有知道整句才定得下来。所以粒度卡在句这一层：短到能尽早开播，长到韵律还成立。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="370" width="980" height="48" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,48 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="组装输入那一步拼了什么">
+    <mxGraphModel dx="1040" dy="460" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="460" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="组装输入这一步，到底拼了什么" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="三段拼成一次请求：怎么答、依据什么答、问的是什么" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="980" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="b1t" value="第一段　人设与约束" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#9c6500;" vertex="1" parent="1">
+          <mxGeometry x="48" y="102" width="944" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="b1b" value="你是产品客服。只根据下面的资料回答，资料里没有的就说不知道，不要编。&#10;回答控制在两三句话，用口语说，不要念文档。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="130" width="944" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f6faf5;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="30" y="196" width="980" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="b2t" value="第二段　检索回来的资料" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="48" y="206" width="944" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="b2b" value="相似度 0.89　退货政策：签收后 7 天内可无理由退货，商品需保持完好、不影响二次销售&#10;相似度 0.85　退货流程：在我的订单里点申请退货，系统审核通过后会生成退货单&#10;相似度 0.71　运费说明：无理由退货的往返运费由买家承担，质量问题除外" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="234" width="944" height="100" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fafbfd;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="358" width="980" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="b3t" value="第三段　用户刚说的这一句" style="text;html=1;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="48" y="366" width="944" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="b3b" value="我买的这个能退吗" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="392" width="944" height="26" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

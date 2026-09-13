@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="上行六步">
+    <mxGraphModel dx="1040" dy="410" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="410" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="上行六步：你的声音变成文字" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="声音在这条链路上换了好几种形态。看懂每一步变成了什么，工程上的细节就都有了着落" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="① 起点　你说话&#10;&#10;声波，空气在振动，还不是数据" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="② 变成数字　麦克风采样&#10;&#10;每秒量 16000 次，每次记一个 16 位整数。这一串整数就是 PCM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="92" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="③ 切成帧　20 毫秒一帧&#10;&#10;320 个采样，合 640 字节。整条链路都按这个节拍走" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="92" width="313" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s4" value="④ 压缩　Opus 编码&#10;&#10;640 字节压到约 80 字节，小了 8 倍。丢的是人耳本来就听不出的部分" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="208" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="⑤ 过网　RTP 打包发走&#10;&#10;加 12 字节包头，走 UDP。每秒 50 个包，不停歇" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="208" width="313" height="104" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="⑥ 落地　解码后送去识别&#10;&#10;服务端解回 16 千赫兹的 PCM，喂给识别模型，出文字" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="208" width="313" height="104" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="从空气到一串整数，再到压缩后的字节流，最后回到文字。每一步都在换形态，但采样率和帧长这两个节拍从头到尾没变过。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="332" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

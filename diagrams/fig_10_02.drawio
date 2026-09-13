@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="DataChannel能传什么">
+    <mxGraphModel dx="1040" dy="470" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="470" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="能传什么，以及通常拿来传什么" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="它就是一条通道。路修好了，拉什么货由使用者决定" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h1" value="数据形态" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="86" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" value="字符串&#10;文字消息，或序列化后的 JSON" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="118" width="313" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" value="二进制&#10;图片、音频片段、结构体" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="118" width="313" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="d3" value="大文件&#10;要自己切片再发，单条消息有上限" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="118" width="313" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="h2" value="典型用途" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="204" width="400" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u1" value="实时文字&#10;聊天消息、字幕、语音转写结果，跟着音视频一起走，天然对齐" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="236" width="313" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="u2" value="状态同步&#10;谁在说话、连接质量、正在输入、在线人数" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="236" width="313" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="u3" value="控制指令&#10;静音、切换摄像头、举手、开始录制、打断当前发言" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="236" width="313" height="88" as="geometry" />
+        </mxCell>
+
+        <mxCell id="u4" value="文件传输&#10;两端直传不经过服务器，省带宽，也不留副本" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="336" width="313" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="u5" value="高频状态&#10;游戏里的位置与动作、协作文档里的光标，每秒几十次" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="363" y="336" width="313" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="u6" value="远程操作&#10;屏幕共享时的键鼠事件、白板标注、远程协助" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=15;align=left;spacingLeft=14;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="697" y="336" width="313" height="88" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

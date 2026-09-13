@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="训练与推理">
+    <mxGraphModel dx="1040" dy="450" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="450" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="模型是怎么学会的：训练与推理" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="760" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="前面拆解的逐帧猜测属于学会之后怎么用，也就是推理。这一套本领本身来自训练" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="c1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="100" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c1t" value="①　喂配好对的数据" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="50" y="116" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c1b" value="每条数据是一段录音配一句标注文字，几万小时、几百万条。这类配好对的语料称为标注语料。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="152" width="260" height="112" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a1" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="190" as="sourcePoint" />
+            <mxPoint x="376" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="c2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="386" y="100" width="300" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c2t" value="②　让它自己找规律" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="406" y="116" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c2b" value="反复对照这几百万条，不断调整内部参数。没有人告诉它某个音该长什么样，规律由它自己从数据里总结。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="406" y="152" width="260" height="112" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a2" value="" style="endArrow=classic;html=1;strokeColor=#999999;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="696" y="190" as="sourcePoint" />
+            <mxPoint x="732" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="c3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="742" y="100" width="270" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c3t" value="③　学会之后拿来用" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="762" y="116" width="240" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="c3b" value="换一段从没听过的录音、换一个没听过的人来说，它也认得出。这种能力称为泛化。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="762" y="152" width="240" height="112" as="geometry" />
+        </mxCell>
+
+        <mxCell id="outT" value="训练出来的是两样东西" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="308" width="400" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="o1" value="声学模型　　负责认这一帧是什么音" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="30" y="340" width="480" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="o2" value="语言模型　　负责在同音字里挑哪个更合上下文" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;fontSize=15;align=left;spacingLeft=16;" vertex="1" parent="1">
+          <mxGeometry x="530" y="340" width="480" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="模型学的不是规则，而是见得多。因此训练时见得少的内容，比如专业术语、人名和方言，识别起来就容易出错，这也是各家服务都提供热词表的原因。" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#b85450;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="392" width="980" height="44" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

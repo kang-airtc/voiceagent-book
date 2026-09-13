@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="WHIP的三次HTTP交互">
+    <mxGraphModel dx="1040" dy="520" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="WHIP：用一次 HTTP 往返完成建连" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="一个 POST 提交 SDP offer，一个响应带回 SDP answer。没有独立的信令通道，没有候选来回交换" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="94" width="980" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="r1t" value="① 客户端发出　POST /whip" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="50" y="104" width="940" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r1b" value="Content-Type 是 application/sdp，而不是平时常见的 application/json&#10;请求体就是 SDP offer，里面已经带上全部 ICE 候选，一次发完" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="134" width="940" height="48" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="30" y="200" width="980" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="r2t" value="② 服务端返回　201 Created" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="50" y="210" width="940" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r2b" value="响应体是 SDP answer，服务端在此之前已解析 offer 并分配好资源&#10;Location 头　这条会话的资源地址，挂断时对它发 DELETE&#10;Link 头　服务端下发 STUN 与 TURN 配置，客户端不必硬编码" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="240" width="940" height="72" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="30" y="330" width="980" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r3t" value="③ 自动完成　不需要写代码" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#7f6000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="340" width="940" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r3b" value="ICE 连通性检查　DTLS 握手　SRTP 密钥协商。至此媒体流开始走 RTP over UDP" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="370" width="940" height="26" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="30" y="416" width="980" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="r4t" value="④ 挂断　DELETE 资源地址" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#9c2b20;" vertex="1" parent="1">
+          <mxGeometry x="50" y="426" width="940" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="r4b" value="对第二步返回的那个地址发一次 DELETE，服务端销毁会话并回 200 OK" style="text;html=1;align=left;verticalAlign=top;fontSize=14;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="50" y="456" width="940" height="26" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

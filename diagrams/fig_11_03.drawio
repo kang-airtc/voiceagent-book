@@ -1,0 +1,57 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="三个贯穿全程的数字">
+    <mxGraphModel dx="1040" dy="420" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="三个贯穿全程的数字" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="这三个数字从头到尾不变。记住它们，链路上大部分参数就不用再查了" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fb;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="980" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="b1n" value="16000 赫兹" style="text;html=1;align=left;verticalAlign=middle;fontSize=19;fontStyle=1;fontColor=#1f4e79;" vertex="1" parent="1">
+          <mxGeometry x="48" y="102" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b1r" value="采样率，全程不变" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="300" y="102" width="690" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b1t" value="麦克风、识别、合成、播放，整条链路一个采样率走到底。每多一次重采样，就多一次失真和出错的机会，所以能不转就不转。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="134" width="942" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f9fb;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="30" y="196" width="980" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="b2n" value="20 毫秒" style="text;html=1;align=left;verticalAlign=middle;fontSize=19;fontStyle=1;fontColor=#38761d;" vertex="1" parent="1">
+          <mxGeometry x="48" y="206" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b2r" value="一帧的长度，也是整条链路的节拍" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="300" y="206" width="690" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b2t" value="语音活动检测数它，RTP 发它，打断时清的也是它。再小，12 字节的包头就快赶上数据本身；再大，延迟直接抬高。每秒 50 帧是行业默认值。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="238" width="942" height="42" as="geometry" />
+        </mxCell>
+
+        <mxCell id="b3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="30" y="300" width="980" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="b3n" value="48000 赫兹" style="text;html=1;align=left;verticalAlign=middle;fontSize=19;fontStyle=1;fontColor=#9c6500;" vertex="1" parent="1">
+          <mxGeometry x="48" y="310" width="250" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b3r" value="RTP 时间戳的时钟，与实际采样率无关" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="300" y="310" width="690" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="b3t" value="Opus 规定不管实际用多少采样率，RTP 时钟恒定为 48 千赫兹。所以每帧时间戳加的是 960，不是 320。写成 320，声音会忽快忽慢，这是最经典的一个坑。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="342" width="942" height="42" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

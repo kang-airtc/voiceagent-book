@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="两个绕不开的点">
+    <mxGraphModel dx="1040" dy="380" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1040" pageHeight="380" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="实现上绕不开的两个点" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#111111;" vertex="1" parent="1">
+          <mxGeometry x="30" y="18" width="900" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="这两件事协议不替使用者处理，必须在应用层自己做" style="text;html=1;align=left;verticalAlign=middle;fontSize=15;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="30" y="50" width="980" height="22" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="30" y="92" width="480" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p1t" value="① 单条消息有大小上限" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#7f6000;" vertex="1" parent="1">
+          <mxGeometry x="48" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p1b" value="跨端的安全值在 64 KB 上下。&#10;&#10;超过这个尺寸的内容要自己切片、编号，到对端再按编号拼回去。&#10;&#10;协议不管这件事。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="48" y="136" width="440" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="p2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="530" y="92" width="480" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="p2t" value="② 发送要看着背压" style="text;html=1;align=left;verticalAlign=middle;fontSize=17;fontStyle=1;fontColor=#9c2b20;" vertex="1" parent="1">
+          <mxGeometry x="548" y="104" width="440" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p2b" value="不看缓冲一直猛灌，会把发送缓冲撑爆。&#10;&#10;发之前先查缓冲里还积压着多少字节，超过阈值就先停下。&#10;&#10;等缓冲降下来的事件到达后再继续发。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#333333;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="548" y="136" width="440" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="note" value="语音智能体传的是转写文字和状态通知，单条都很小，这两点通常不会成为瓶颈。但若打算用它传音频片段或文件，这两件事必须先做好。" style="text;html=1;align=left;verticalAlign=top;fontSize=15;fontColor=#555555;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="308" width="980" height="52" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
